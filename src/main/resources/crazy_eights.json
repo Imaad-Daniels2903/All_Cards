@@ -1,0 +1,60 @@
+{
+  "players" : {
+    "min" : 2,
+    "max" : 8,
+    "player_type" : [
+      {
+        "name" : "player",
+        "initial_hand_size" : 8,
+        "discard_behaviour" : {
+          "pile_name" : ["discard"],
+          "discard_type" :  "single"
+        },
+        "draw_behaviour" : {
+          "name": ["draw"],
+          "draw_type" : "single" // single or iterative
+        },
+        "other_behaviour" : null // calling in go fish
+      }
+    ]
+  },
+  "piles" : [
+    {
+      "name" : "draw",
+      "face" : true,
+      "drawable" : true,
+      "shufflable" : true,
+      "insert_behaviour" : null,
+      "take_behaviour" : {
+        "take_position" : "top",
+        "max_take" : 1
+      }
+
+    },
+
+    {
+      "name" : "discard",
+      "face" : true,
+      "drawable" : false,
+      "shufflable" : true,
+      "insert_behaviour" : {
+        "insert_position" : "top",
+        "max_insert" : 1
+      },
+      "take_behaviour" : null
+    }],
+
+  "win_state" : {
+    "pile" :     {
+      "name" : "discard",
+      "face" : true,
+      "drawable" : false,
+      "shufflable" : true,
+      "insert_behaviour" : {
+        "insert_position" : "top",
+        "max_insert" : 1
+      }
+  }
+
+
+}
