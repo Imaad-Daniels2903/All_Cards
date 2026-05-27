@@ -49,15 +49,19 @@
     }
   ],
   "win_state": {
-    "pile": {
+    "piles_final": [
+      {
       "name": "discard",
-      "face": true,
-      "drawable": false,
-      "shufflable": true,
-      "insert_behaviour": {
-        "insert_position": "top",
-        "max_insert": 1
-      }
+      "size" : "any"
+    }
+      ],
+    "winning_player" : {
+
+    },
+
+    "final_card" : {
+      "suite" : "any",
+      "value" : "number"
     }
   }
 }
